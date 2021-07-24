@@ -17,7 +17,7 @@ int printnumbers(int nu, char *save)
 	if (nu < 0)
 	{
 		a = a * -1;
-		_putcharsave, '-')
+		_putchar(save, '-')
 		}
 while (a > 9 || a < -9)
 {
