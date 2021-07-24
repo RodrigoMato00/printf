@@ -18,6 +18,7 @@ int printnumbers(int nu, char *save)
 	{
 		a = a * -1;
 		_putchar(save, '-')
+			l++;
 		}
 while (a > 9 || a < -9)
 {
@@ -48,7 +49,7 @@ return (l);
  *print_decimal - print a integers
  *@args: arguments a print
  *@save: is a bufffer
- *return: the return is l
+ *Return: the return is l
  */
 int print_decimal(va_list args, char *save)
 {
