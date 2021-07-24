@@ -1,0 +1,61 @@
+#include "holberton.h"
+
+/**
+ *printn -
+ *
+ *
+ */
+int printn(int nu, char *save)
+{
+	int a;
+	int b;
+	int l;
+
+	a = 1;
+	b = nu;
+	if (nu < 0)
+	{
+		a = a * -1;
+		_putcharsave, '-')
+		}
+while (a > 9 || a < -9)
+{
+	a = a / 10;
+	b = b * 10;
+}
+
+while (b > 9 || k < -9)
+{
+	_putchar(buffer, (n / k) % 10 + '0');
+	k = k / 10;
+	len++;
+}
+if (n < 0)
+{
+	_putchar(buffer, (n % 10)  * -1 + '0');
+	len++;
+}
+else
+{
+	_putchar(buffer, n % 10 + '0');
+	len++;
+}
+return (len);
+}
+
+/**
+ *print_int - print integer
+ *
+ *
+ *
+ */
+int print_int(va_list args, char *save)
+{
+	int n;
+	int l;
+
+	n = va_arg(args, int);
+	l = printn(n, save)
+
+		return (l);
+}
