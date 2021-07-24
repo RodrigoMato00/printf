@@ -24,9 +24,25 @@ int print_char(va_list list, char *save)
  *
  *
  */
+
+int print_str(va_list args, char *save)
 {
+
 
 }
 
 /**
- *print_percent - 
+ *print_percent - print percentage
+ *@a:
+ *@save:
+ *Return:
+ */
+
+int print_percent(char a, char *save)
+{
+	a++;
+	_putchar(save, "%");
+
+	return(1);
+}
+
