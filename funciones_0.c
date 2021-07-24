@@ -45,4 +45,3 @@ int print_percent(char a, char *save)
 
 	return(1);
 }
-
