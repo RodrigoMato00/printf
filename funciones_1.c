@@ -1,9 +1,10 @@
 #include "holberton.h"
 
 /**
- *printnumbers -
- *
- *
+ *printnumbers - this function print numbers
+ *@nu: integer of the entry
+ *@save: is a buffer
+ *Return: the return is l
  */
 int printnumbers(int nu, char *save)
 {
@@ -44,9 +45,10 @@ return (l);
 }
 
 /**
- *print_decimal -
- *
- *
+ *print_decimal - print a integers
+ *@args: arguments a print
+ *@save: is a bufffer
+ *return: the return is l
  */
 int print_decimal(va_list args, char *save)
 {
@@ -60,10 +62,10 @@ int print_decimal(va_list args, char *save)
 }
 
 /**
- *print_int - print integer
- *
- *
- *
+ *print_int - print a integer
+ *@args: arguments a print
+ *@save: is a buffer
+ *Return: return a l
  */
 int print_int(va_list args, char *save)
 {
@@ -75,4 +77,3 @@ int print_int(va_list args, char *save)
 
 		return (l);
 }
-
