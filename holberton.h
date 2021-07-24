@@ -11,7 +11,7 @@ int print_str(va_list args, char *save);
 int print_percent(char a, char *save);
 
 int print_decimal(va_list args, char *save);
-int print_int(va_list args, char *save)
+int print_int(va_list args, char *save);
 
 int _printf(const char *format, ...);
 int _putchar(char c);
