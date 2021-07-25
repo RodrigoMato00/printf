@@ -1,16 +1,22 @@
 #include "holberton.h"
 
 /**
- *print_char - print character
- *@list: blblblblblblb
- *@save: blblblblblblblb
+ *print_str - print string
+ *@str: string
+ *@i: int
  *Return: blblblblblblblblb
  */
-int print_char(va_list list)
-{
-	char a;
 
-	a = va_arg(list, int)
-	_putchar(a);
-	return(1);
+int print_str(char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		_putchar (str[i]);
+
+	}
+
+	return (i);
+
 }
