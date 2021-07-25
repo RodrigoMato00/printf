@@ -2,15 +2,11 @@
 
 /**
  *print_char - print character
- *@list: blblblblblblb
- *@save: blblblblblblblb
- *Return: blblblblblblblblb
+ *@list: blblblblb
+ *@save: blblblbl
+ *Return: blblblblblb
  */
-int print_char(va_list list)
+int print_char(char c)
 {
-	char a;
-
-	a = va_arg(list, int)
-	_putchar(a);
-	return(1);
+	return (write(1, &c, 1));
 }
