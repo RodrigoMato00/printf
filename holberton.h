@@ -16,17 +16,4 @@ int print_int(va_list args, char *save);
 int _printf(const char *format, ...);
 int _putchar(char c);
 
-/**
- * struct datatype - Typedef for struct
- * @type: first member
- * @func: second member
- */
-typedef struct datatype
-{
-	char *type;
-	int (*func)(va_list list);
-} data_t;
-
-int functions(const char *format, data_t type[],  va_list list)
-
 #endif
