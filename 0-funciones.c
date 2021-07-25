@@ -2,46 +2,15 @@
 
 /**
  *print_char - print character
- *@list:
- *@save:
- *Return:
+ *@list: blblblblblblb
+ *@save: blblblblblblblb
+ *Return: blblblblblblblblb
  */
-int print_char(va_list list, char *save)
+int print_char(va_list list)
 {
-	char a = va_arg(args, int)
+	char a;
 
-	if (a == '\0')
-	{
-		write(1, &a, 1);
-		return(1);
-	}
-	_putchar(save, a);
-	return (1);
-}
-
-/**
- *print_str -
- *
- *
- */
-
-int print_str(va_list args, char *save)
-{
-
-
-}
-
-/**
- *print_percent - print percentage
- *@a:
- *@save:
- *Return:
- */
-
-int print_percent(char a, char *save)
-{
-	a++;
-	_putchar(save, "%");
-
+	a = va_arg(list, int)
+	_putchar(a);
 	return(1);
 }
