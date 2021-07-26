@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 	};
 
 	bi = &i;
-	if (format == NULL)
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	buffer = malloc(1024);
 	if (buffer == NULL)
