@@ -40,10 +40,6 @@ int _printf(const char *format, ...)
 		return (-1);
 	counter = formats(format, spec, args, buffer, bi);
 	write(1, buffer, *bi);
-	return (-1);
-	counter = formats(format, spec, args, buffer, bi);
-
-	write(1, buffer, *bi);
 	free(buffer);
 	va_end(args);
 	return (counter);
