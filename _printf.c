@@ -29,9 +29,11 @@ int _printf(const char *format, ...)
 		{"x", print_hex},
 		{"X", print_hex_caps},
 		/*{"S", pintf_str_npc},*/
-		{"R", print_rot13}
+		/*{"R", print_rot13},*/
+		{"s", print_str},
 		{NULL, NULL}
-	}; /* este struct que se ve arriba va a funcionar como selector de funciones, cada caracter que se ve es un placeholder, y dependiendo del mismo, la funcion que va a realizar para printear */
+	};
+		/* este struct que se ve arriba va a funcionar como selector de funciones, cada caracter que se ve es un placeholder, y dependiendo del mismo, la funcion que va a realizar para printear */
 
 	bi = &i;
 	if (format == NULL)
