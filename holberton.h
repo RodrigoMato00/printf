@@ -1,26 +1,32 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
-
 #include <stdarg.h>
 #include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
+#include <stdio.h>
 
-<<<<<<< HEAD
-int print_char(va_list list)
-int print_str(va_list args, char *save);
-=======
-int print_char(va_list list, char *save);
-int print_str(char *str);
->>>>>>> ef172a461cc8ad2c679732b2189ede6af1653142
-int print_percent(char a, char *save);
+/**
+ *struct spec - printf specifiers
+ *@s: character specifier
+ *@printspec: function pointer to a format function
+ *
+ *Description: structure holds a character specifier and a format function
+ */
+typedef struct spec
+{
+	char *s;
+	char *(*printspec)(va_list);
+} specifiers;
 
-int print_decimal(va_list args, char *save);
-int print_int(va_list args, char *save);
-
+int formats(const char *form, specifiers *spec, va_list args, char *b, int *bi);
+int printfbufferoverflow(char *buffer);
+char *printuint(va_list list);
 int _printf(const char *format, ...);
+char *printchar(va_list list);
+char *printstr(va_list list);
+char *printint(va_list list);
+char *printbin(va_list list);
+char *printoctal(va_list list);
+char *printhex(va_list list);
+char *printhexcaps(va_list list);
 int _putchar(char c);
-
-
-
 #endif
