@@ -39,7 +39,7 @@ int formats(const char *form, specifiers *spec, va_list args, char *b, int *bi)
 						b[*bi] = str[sti];
 						if (*bi == 1024)
 						{
-							totalcount += printfbufferoverflow(b);
+							totalcount += printf_bufferoverflow(b);
 							*bi = 0;
 						}
 						else
@@ -56,7 +56,7 @@ int formats(const char *form, specifiers *spec, va_list args, char *b, int *bi)
 				b[*bi] = '%';
 				if (*bi == 1024)
 				{
-					totalcount += printfbufferoverflow(b);
+					totalcount += printf_bufferoverflow(b);
 					*bi = 0;
 				}
 				else
@@ -66,7 +66,7 @@ int formats(const char *form, specifiers *spec, va_list args, char *b, int *bi)
 					b[*bi] = form[fi];
 					if (*bi == 1024)
 					{
-						totalcount += printfbufferoverflow(b);
+						totalcount += printf_bufferoverflow(b);
 						*bi = 0;
 					}
 					else
@@ -79,7 +79,7 @@ int formats(const char *form, specifiers *spec, va_list args, char *b, int *bi)
 			b[*bi] = form[fi];
 			if (*bi == 1024)
 			{
-				totalcount += printfbufferoverflow(b);
+				totalcount += printf_bufferoverflow(b);
 				*bi = 0;
 			}
 			else

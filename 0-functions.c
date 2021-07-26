@@ -10,7 +10,7 @@
  *
  *Return: number of characters printed to stdout
  */
-char *printchar(va_list list)
+char *print_char(va_list list)
 {
 	char *character;
 	int i = 0;
@@ -26,12 +26,12 @@ char *printchar(va_list list)
 }
 
 /**
- *printstr - prints a string
+ *print_str - prints a string
  *@list: variadic list of arguments
  *
  *Return: number of characters printed to stdout
  */
-char *printstr(va_list list)
+char *print_str(va_list list)
 {
 	int i = 0;
 	char *str;
@@ -56,12 +56,12 @@ char *printstr(va_list list)
 }
 
 /**
- *printint - prints an integer
+ *print_int - prints an integer
  *@list: variadic list of arguments
  *
  *Return: number of characters printed to stdout
  */
-char *printint(va_list list)
+char *print_int(va_list list)
 {
 	int tens = 1;
 	int i = 0;
@@ -109,7 +109,7 @@ char *printint(va_list list)
  *
  *Return: number of characters printed to stdout
  */
-char *printuint(va_list list)
+char *print_u_int(va_list list)
 {
 	unsigned int tens = 1;
 	unsigned int i = 0;

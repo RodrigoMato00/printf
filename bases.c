@@ -9,19 +9,19 @@
  *
  *Return: number of characters printed to stdout
  */
-char *printbin(va_list list)
+char *print_bin(va_list list)
 {
 	int bin[32];
-	char *binum;
+	char *bn;
 	int i = 0, j = 0;
 	unsigned int num = va_arg(list, unsigned int);
 
-	binum = malloc(33);
-	if (binum == NULL)
+	bn = malloc(33);
+	if (bn == NULL)
 		return (NULL);
 	if (num == 0)
 	{
-		binum[j] = (0 + '0');
+		bn[j] = (0 + '0');
 		j++;
 	}
 	while (num != 0)
@@ -32,11 +32,11 @@ char *printbin(va_list list)
 	}
 	for (i = i - 1; i >= 0; i--)
 	{
-		binum[j] = (bin[i] + '0');
+		bn[j] = (bin[i] + '0');
 		j++;
 	}
-	binum[j] = '\0';
-	return (binum);
+	bn[j] = '\0';
+	return (bn);
 }
 
 /**
@@ -45,7 +45,7 @@ char *printbin(va_list list)
  *
  *Return: number of characters printed to stdout
  */
-char *printoctal(va_list list)
+char *print_octal(va_list list)
 {
 	int i = 0, j = 0;
 	char oct[32];
@@ -81,7 +81,7 @@ char *printoctal(va_list list)
  *
  *Return: number of characters printed to stdout
  */
-char *printhex(va_list list)
+char *print_hex(va_list list)
 {
 	int i = 0, j = 0;
 	char hex[32];
@@ -121,7 +121,7 @@ char *printhex(va_list list)
  *
  *Return: number of characters printed to stdout
  */
-char *printhexcaps(va_list list)
+char *print_hex_caps(va_list list)
 {
 	int i = 0, j = 0;
 	char hex[32];

@@ -6,7 +6,7 @@
  *
  *Return: 1024 since that is the amount of characters printed
  */
-int printfbufferoverflow(char *buffer)
+int printf_bufferoverflow(char *buffer)
 {
 	write(1, buffer, 1024);
 	return (1024);
