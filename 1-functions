@@ -58,7 +58,7 @@ int pintf_str_npc(va_list list)
 }
 
 /**
- *rot13 - String to rot13
+ *print_rot13 - String to rot13
  *@list: pointer the string we want to capitalize
  *Return: string
  */

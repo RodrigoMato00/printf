@@ -4,7 +4,7 @@
 #include "holberton.h"
 
 /**
- *printbin - prints an unsigned int as binary
+ *print_bin - prints an unsigned int as binary
  *@list: variadic argument list
  *
  *Return: number of characters printed to stdout
@@ -40,7 +40,7 @@ char *print_bin(va_list list)
 }
 
 /**
- *printoctal - converts from decimal to octal
+ *print_octal - converts from decimal to octal
  *@list: variadic list of arguments
  *
  *Return: number of characters printed to stdout
@@ -76,7 +76,7 @@ char *print_octal(va_list list)
 }
 
 /**
- *printhex - converts from decimal to hexadecimal
+ *print_hex - converts from decimal to hexadecimal
  *@list: variadic list of arguments
  *
  *Return: number of characters printed to stdout
@@ -116,7 +116,7 @@ char *print_hex(va_list list)
 }
 
 /**
- *printhexcaps - converts from decimal to hexadecimal using capital letters
+ *print_hex_caps - converts from decimal to hexadecimal using capital letters
  *@list: variadic list of arguments
  *
  *Return: number of characters printed to stdout

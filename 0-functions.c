@@ -5,7 +5,7 @@
 #include "holberton.h"
 
 /**
- *printchar - prints a character
+ *print_char - prints a character
  *@list: variadic list of arguments
  *
  *Return: number of characters printed to stdout
@@ -104,7 +104,7 @@ char *print_int(va_list list)
 }
 
 /**
- *printuint - prints an unsigned int
+ *print_u_int - prints an unsigned int
  *@list: variadic argument list
  *
  *Return: number of characters printed to stdout
@@ -142,6 +142,11 @@ char *print_u_int(va_list list)
 	unsignedint[i] = '\0';
 	return (unsignedint);
 }
+/**
+ * print_percent - print percent
+ * @list: list
+ * Return: 1
+ */
 
 int print_percent(va_list list __attribute__((unused)))
 {
