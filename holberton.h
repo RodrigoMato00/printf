@@ -30,5 +30,6 @@ char *print_octal(va_list list);
 char *print_hex(va_list list);
 char *print_hex_caps(va_list list);
 int pintf_str_npc(va_list list);
+int print_rot13(va_list list);
 int _putchar(char c);
 #endif

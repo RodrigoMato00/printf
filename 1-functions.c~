@@ -5,9 +5,9 @@
 #include "holberton.h"
 
 /**
- *pintf_str_npc - prints the string
- *@format: string to print
- *Return: int co
+ *pintf_str_npc - prints a string
+ *@list: string to print
+ *Return: 0
  */
 int pintf_str_npc(va_list list)
 {

@@ -56,3 +56,34 @@ int pintf_str_npc(va_list list)
 	}
 	return (cont + count);
 }
+
+/**
+ *rot13 - String to rot13
+ *@list: pointer the string we want to capitalize
+ *Return: string
+ */
+int print_rot13(va_list list)
+{
+	char m[53] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char n[53] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int i, j;
+	char *s;
+
+	s = va_arg(list, char*);
+	if (!s)
+		return (-1);
+	for (i = 0; s[i] != 0; i++)
+	{
+		for (j = 0; m[j] != '\0'; j++)
+		{
+			if (s[i] == m[j])
+			{
+				_putchar(n[j]);
+				break;
+			}
+		}
+		if (!m[j])
+			_putchar(s[i]);
+	}
+	return (_strlen(s));
+}
