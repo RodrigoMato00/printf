@@ -18,15 +18,15 @@ int _printf(const char *format, ...)
 	int *bi;
 	int i = 0;
 	specifiers spec[] = {
-		{"c", printchar},
-		{"s", printstr},
-		{"d", printint},
-		{"i", printint},
-		{"b", printbin},
-		{"u", printuint},
-		{"o", printoctal},
-		{"x", printhex},
-		{"X", printhexcaps},
+		{"c", print_char},
+		{"s", print_str},
+		{"d", print_int},
+		{"i", print_int},
+		{"b", print_bin},
+		{"u", print_u_int},
+		{"o", print_octal},
+		{"x", print_hex},
+		{"X", print_hex_caps},
 		{NULL, NULL}
 	};
 
