@@ -23,6 +23,7 @@ int _printf(const char *format, ...)
 		{"d", print_int},
 		{"i", print_int},
 		{"b", print_bin},
+		/*{"%", print_percent},*/
 		{"u", print_u_int},
 		{"o", print_octal},
 		{"x", print_hex},

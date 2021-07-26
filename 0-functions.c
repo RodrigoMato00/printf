@@ -142,3 +142,9 @@ char *print_u_int(va_list list)
 	unsignedint[i] = '\0';
 	return (unsignedint);
 }
+
+int print_percent(va_list list __attribute__((unused)))
+{
+	_putchar('%');
+	return (1);
+}

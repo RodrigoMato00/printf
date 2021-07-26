@@ -20,6 +20,7 @@ typedef struct spec
 int formats(const char *form, specifiers *spec, va_list args, char *b, int *bi);
 int printf_bufferoverflow(char *buffer);
 char *print_u_int(va_list list);
+int print_percent(va_list list __attribute__((unused)));
 int _printf(const char *format, ...);
 char *print_char(va_list list);
 char *print_str(va_list list);
