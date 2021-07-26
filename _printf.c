@@ -3,12 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "holberton.h"
-/**
- *_printf - print
- *@format: format
- *@i: i
- *Return: i
- */
 
 /**
  *_printf - prints a string with specifiers
@@ -18,11 +12,6 @@
  */
 int _printf(const char *format, ...)
 {
-	int i;
-
-	for (i = 0; format[i] != '\0'; i++)
-
-		_putchar(format[i]);
 	va_list args;
 	int counter = 0;
 	char *buffer;
@@ -41,7 +30,6 @@ int _printf(const char *format, ...)
 		{NULL, NULL}
 	};
 
-	return (i);
 	bi = &i;
 	if (format == NULL)
 		return (-1);
