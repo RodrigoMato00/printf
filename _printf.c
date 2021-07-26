@@ -3,6 +3,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "holberton.h"
+/**
+ *_printf - print
+ *@format: format
+ *@i: i
+ *Return: i
+ */
 
 /**
  *_printf - prints a string with specifiers
@@ -12,26 +18,33 @@
  */
 int _printf(const char *format, ...)
 {
+	int i;
+
+	for (i = 0; format[i] != '\0'; i++)
+
+		_putchar(format[i]);
 	va_list args;
 	int counter = 0;
 	char *buffer;
 	int *bi;
 	int i = 0;
 	specifiers spec[] = {
-		{"c", print_char}, {"s", print_str}, {"d", print_int},
-		{"i", print_int}, {"b", print_bin},
-		/*{"%", print_percent},*/
-		{"u", print_u_int}, {"o", print_octal},
-		{"x", print_hex}, {"X", print_hex_caps},
-		/*{"S", pintf_str_npc},*/
-		/*{"R", print_rot13},*/
-		{"s", print_str}, {NULL, NULL}
+		{"c", printchar},
+		{"s", printstr},
+		{"d", printint},
+		{"i", printint},
+		{"b", printbin},
+		{"u", printuint},
+		{"o", printoctal},
+		{"x", printhex},
+		{"X", printhexcaps},
+		{NULL, NULL}
 	};
+
+	return (i);
 	bi = &i;
 	if (format == NULL)
 		return (-1);
-	buffer = malloc(1024);
-	return (-1);
 	buffer = malloc(1024);
 	if (buffer == NULL)
 		return (-1);
@@ -42,6 +55,5 @@ int _printf(const char *format, ...)
 	write(1, buffer, *bi);
 	free(buffer);
 	va_end(args);
-	return (counter);
 	return (counter);
 }
