@@ -18,30 +18,45 @@ int _printf(const char *format, ...)
 	{
 		va_start(list, format);
 
-		for (; format[a] !('0') a++);
+		if (list == NULL)
+			return (-1);
 
-			if (op)
+		for (; format[a] != '\0'; a++)
+		{
+			if (!op)
 			{
-				if (format[a] != ('%'))
-				b += _putchar(format[a]);
-
+				if (format[a] != '%')
+					b += _putchar(format[a]);
 				else
-				op = 1
-				;
-
+					op = 1;
 			}
 			else
-				switch (format[a])
+			{	switch (format[a])
 				{
-				case 'c'
-				b += _putchar(va_arg(list, int));
-				break;
+				case 'c':
+					b += _putchar(va_arg(list, int));
+					break;
+				case 's':
+					b += print_str(va_arg(list, char *));
+					break;
+				case '%':
+					b += _putchar('%');
+					break;
+				case 'd':
+					b += print_number(va_arg(list, int));
+					break;
+				case 'i':
+					b += print_number(va_arg(list, int));
+					break;
 				}
-			b = 0;
-			va_end;
-
-			else
-			return (-1);
+			op = 0;
+			}
+		va_end(list);
+			}
+	}
+	else
+	{
+		return (-1);
 	}
 	return (b);
 }

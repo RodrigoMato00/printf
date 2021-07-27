@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdarg.h>
+#include <unistd.h>
 
 /**
  * _putchar - writes the character c to stdout
@@ -13,7 +14,7 @@
 
 int _putchar(char c)
 {
-		return (write(1, &c, 1));
+	return (write(1, &c, 1));
 }
 
 /**
@@ -26,51 +27,48 @@ int print_str(char *c)
 {
 	int a = 0;
 
-	if (a == NULL)
+	if (c == NULL)
 	{
-		a = "(null)";
+		c = "(null)";
 	}
 
-	if (a)
+	if (c)
 	{
-		for (c[a] != '\0', a++)
+		for (; c[a] != '\0'; a++)
+		{
 			_putchar(c[a]);
+		}
 	}
 	return (a);
 }
 
 /**
-  *print_int - prints an int
-  *@n: int
-  *Return: b
-  */
-
-int print_int(int n)
+ * print_int - Prints an integer.
+ * @n: The integer to be printed.
+ *Return: b
+ */
+int print_number(int n)
 {
-	int a = 0;
+	int a = n;
 	int b = 0;
 
 	if (n)
 	{
 		if (n < 0)
-	{
-		b += _putchar('-');
-			a = -b;
-	}
-		if ((a / 10) > 0)
-	{
-		b += print_int(a / 10);
-		b += _putchar((a % 10) + '0');
-
-		else
 		{
-			b += _putchar(n + '\0');
+			b += _putchar('-');
+			a = -a;
 		}
 
-		return (b);
+		if ((b / 10) > 0)
+			b += print_number(b / 10);
+		b += _putchar((a % 10) + '0');
 	}
 
+	else
+	{
+		b += _putchar(n + '0');
+	}
 
-
-
-
+	return (b);
+}
