@@ -25,19 +25,19 @@ int _putchar(char c)
 
 int print_str(char *c)
 {
-	int a = 0;
+	int i = 0;
 	int count = 0;
 
-	if (!c)
-	{
-		return (-1);
+	if (c)
+	{		
+		for (; c[i] != '\0' ; i++)
+		{
+			count += _putchar(c[i]);
+		}
 	}
 	else
 	{
-		for (; c[a] != '\0'; a++)
-		{
-			count += _putchar(c[a]);
-		}
+		return (-1);
 	}
 	return (count);
 }
