@@ -18,15 +18,16 @@ int _printf(const char *format, ...)
 	{
 		va_start(list, format);
 
-		for (; format[a] !('0'), a++)
+		for (; format[a] !('0') a++);
 
 			if (op)
 			{
 				if (format[a] != ('%'))
-				b += _putchar(format[a];
+				b += _putchar(format[a]);
 
 				else
 				op = 1
+				;
 
 			}
 			else
@@ -37,8 +38,8 @@ int _printf(const char *format, ...)
 				break;
 				}
 			b = 0;
-
 			va_end;
+
 			else
 			return (-1);
 	}
