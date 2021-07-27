@@ -42,20 +42,20 @@ int print_str(char *c)
 }
 
 /**
- * print_numbers - Prints an integer.
- * @n: The integer to be printed.
- *Return: b
+ * print_numbers - Prints integer.
+ * @n: The integer to printeded.
+ *Return: a
  */
 int print_numbers(long int n)
 {
-	long int b = 0;
+	int b = 0;
 
+	if (n)
 	{
 		if (n < 0)
 		{
 			_putchar('-');
-			b = (print_numbers(n * -1)) + 1;
-			return (0);
+			return (print_numbers(n * -1) + 1);
 		}
 		if (n < 10)
 		{
@@ -64,9 +64,14 @@ int print_numbers(long int n)
 		}
 		else
 		{
-			b = (print_numbers(n / 10)) + 1;
-                        _putchar((n % 10) +'0');
+		        b += print_numbers(n / 10);
+			_putchar((n % 10) + '0');
 			return (b);
 		}
 	}
+        else
+        {
+		n += _putchar(n + '0');
+        }
+	return (n);
 }
