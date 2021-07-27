@@ -48,30 +48,23 @@ int print_str(char *c)
  */
 int print_numbers(long int n)
 {
-	int b = 0;
+	long int d = n;
+	int f = 0;
 
 	if (n)
 	{
 		if (n < 0)
 		{
-			_putchar('-');
-			return (print_numbers(n * -1) + 1);
+			f += _putchar('-');
+			d = -d;
 		}
-		if (n < 10)
-		{
-			_putchar(n + '0');
-			return (1);
-		}
-		else
-		{
-		        b += print_numbers(n / 10);
-			_putchar((n % 10) + '0');
-			return (b);
-		}
+		if ((d / 10) > 0)
+			f += print_numbers(d / 10);
+		f += _putchar((d % 10) + '0');
 	}
-        else
-        {
-		n += _putchar(n + '0');
-        }
-	return (n);
+	else
+	{
+		f += _putchar(n + '0');
+	}
+	return (f);
 }
