@@ -25,12 +25,19 @@ int _putchar(char c)
 
 int print_str(char *c)
 {
-	int a;
-	if (c == NULLO)
-		c = "(null)";
+	int a = 0;
 
-	for (a = 0; c[a]; a++)
-		_putchar(c[a]);
+	if (c == NULL)
+	{
+		c = "(null)";
+	}
+	if (c)
+	{
+		for (; c[a] != '\0'; a++)
+		{
+			_putchar(c[a]);
+		}
+	}
 	return (a);
 }
 
@@ -39,9 +46,9 @@ int print_str(char *c)
  * @n: The integer to be printed.
  *Return: b
  */
-int print_numbers(int n)
+int print_numbers(long int n)
 {
-	int b = 0;
+	long int b = 0;
 
 	{
 		if (n < 0)
