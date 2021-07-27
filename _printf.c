@@ -17,7 +17,8 @@ int _printf(const char *format, ...)
 	if (format)
 	{
 		va_start(list, format);
-
+		if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+			return (-1);
 		if (list == NULL)
 			return (-1);
 
@@ -48,6 +49,9 @@ int _printf(const char *format, ...)
 				case 'i':
 					b += print_number(va_arg(list, int));
 					break;
+				default:
+					b += _putchar('%');
+					b += _putchar(format[a]);
 				}
 			op = 0;
 			}
