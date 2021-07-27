@@ -25,21 +25,15 @@ int _putchar(char c)
 
 int print_str(char *c)
 {
-	int i = 0;
-
-	if (c == NULL)
-	{
+	int a;
+	if (c == NULLO)
 		c = "(null)";
-	}
-	if (c)
-	{
-		for (; c[i] != '\0'; i++)
-		{
-			_putchar(c[i]);
-		}
-	}
-	return (i);
+
+	for (a = 0; c[a]; a++)
+		_putchar(c[a]);
+	return (a);
 }
+
 /**
  * print_numbers - Prints an integer.
  * @n: The integer to be printed.
