@@ -1,0 +1,14 @@
+#include <stdlib.h>
+#include <unistd.h>
+#include "holberton.h"
+/**
+ *printf_bufferoverflow - prints the buffer if the number of characters is 1024
+ *@buffer: the buffer to print the contents of
+ *
+ *Return: 1024 since that is the amount of characters printed
+ */
+int printf_bufferoverflow(char *buffer)
+{
+        write(1, buffer, 1024);
+        return (1024);
+}

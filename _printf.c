@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stdio.h>
+#define BUFFER_SIZE 1024
 
 /**
   *_printf - printf
@@ -21,7 +22,6 @@ int _printf(const char *format, ...)
 			return (-1);
 		if (list == NULL)
 			return (-1);
-
 		for (; format[a] != '\0'; a++)
 		{
 			if (!op)
