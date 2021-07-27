@@ -29,7 +29,7 @@ int print_str(char *c)
 
 	if (c == NULL)
 	{
-		c = "(null)";
+	    c = "(null)";
 	}
 
 	if (c)

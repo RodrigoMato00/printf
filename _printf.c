@@ -32,7 +32,8 @@ int _printf(const char *format, ...)
 					op = 1;
 			}
 			else
-			{	switch (format[a])
+			{
+				switch (format[a])
 				{
 				case 'c':
 					b += _putchar(va_arg(list, int));
