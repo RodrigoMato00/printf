@@ -45,10 +45,10 @@ int _printf(const char *format, ...)
 					b += _putchar('%');
 					break;
 				case 'd':
-					b += print_number(va_arg(list, int));
+					b += print_numbers(va_arg(list, int));
 					break;
 				case 'i':
-					b += print_number(va_arg(list, int));
+					b += print_numbers(va_arg(list, int));
 					break;
 				default:
 					b += _putchar('%');

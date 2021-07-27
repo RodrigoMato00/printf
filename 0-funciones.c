@@ -43,32 +43,31 @@ int print_str(char *c)
 }
 
 /**
- * print_int - Prints an integer.
+ * print_numbers - Prints an integer.
  * @n: The integer to be printed.
  *Return: b
  */
-int print_number(int n)
+int print_numbers(int n)
 {
-	int a = n;
 	int b = 0;
 
-	if (n)
 	{
 		if (n < 0)
 		{
-			b += _putchar('-');
-			a = -a;
+			_putchar('-');
+			b = (print_numbers(n * -1)) + 1;
+				return (b);
 		}
-
-		if ((b / 10) > 0)
-			b += print_number(a / 10);
-		b += _putchar((a % 10) + '0');
+		if (b < 10)
+		{
+			_putchar(n + '0');
+				return (1);
+		}
+		else
+		{
+			b = (print_numbers(n / 10)) + 1;
+                        _putchar((n % 10) +'0');
+			return (b);
+		}
 	}
-
-	else
-	{
-		b += _putchar(n + '0');
-	}
-
-	return (b);
 }
