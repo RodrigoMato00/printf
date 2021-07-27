@@ -38,7 +38,7 @@ int _printf(const char *format, ...)
 				}
 			b = 0;
 
-			va_end
+			va_end;
 			else
 			return (-1);
 	}
