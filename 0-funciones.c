@@ -26,22 +26,20 @@ int _putchar(char c)
 int print_str(char *c)
 {
 	int i = 0;
-	int count = 0;
 
+	if (c == NULL)
+	{
+		c = "(null)";
+	}
 	if (c)
-	{		
-		for (; c[i] != '\0' ; i++)
+	{
+		for (; c[i] != '\0'; i++)
 		{
-			count += _putchar(c[i]);
+			_putchar(c[i]);
 		}
 	}
-	else
-	{
-		return (-1);
-	}
-	return (count);
+	return (i);
 }
-
 /**
  * print_numbers - Prints an integer.
  * @n: The integer to be printed.
