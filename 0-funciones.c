@@ -56,12 +56,12 @@ int print_numbers(int n)
 		{
 			_putchar('-');
 			b = (print_numbers(n * -1)) + 1;
-				return (b);
+			return (0);
 		}
-		if (b < 10)
+		if (n < 10)
 		{
 			_putchar(n + '0');
-				return (1);
+			return (1);
 		}
 		else
 		{
