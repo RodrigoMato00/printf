@@ -26,20 +26,20 @@ int _putchar(char c)
 int print_str(char *c)
 {
 	int a = 0;
+	int count = 0;
 
-	if (c == NULL)
+	if (!c)
 	{
-	    c = "(null)";
+		return (-1);
 	}
-
-	if (c)
+	else
 	{
 		for (; c[a] != '\0'; a++)
 		{
-			_putchar(c[a]);
+			count += _putchar(c[a]);
 		}
 	}
-	return (a);
+	return (count);
 }
 
 /**
