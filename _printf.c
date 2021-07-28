@@ -50,6 +50,9 @@ int _printf(const char *format, ...)
 				case 'i':
 					b += print_numbers(va_arg(list, int));
 					break;
+					/*case 'R':
+					b += char *rot13(va_arg(list, char);
+				        break;*/
 				default:
 					b += _putchar('%');
 					b += _putchar(format[a]);

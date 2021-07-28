@@ -7,5 +7,5 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 int print_str(char *c);
 int print_numbers(long int n);
-
+int print_rot13(char *p);
 #endif
