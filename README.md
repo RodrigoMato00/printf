@@ -13,7 +13,7 @@ The format string is a character string, beginning and ending in its initial shi
 | %  |% followed by another % character will write a single % to the stream   |
 | d-i    | signed decimal integer  |
 
-#####Return 
+##### Return 
 
 Upon successful return, these function return the number of characters printed (excluding the null byte used to end output to strings). If an output error is encountered, a negative value is returned (-1).
 
